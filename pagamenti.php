@@ -21,9 +21,19 @@
   WHERE id >= 100
   ';
 
+
   $res = $connection ->query($query);
+
+  $pagamenti = [];
+
+  if ($res && $res -> num_rows > 0){
+
+    while($row = $res -> fetch_assoc()){
+      $pagamenti[] = $row;
+    }
+  }
 
   $connection -> close();
 
-  echo json_encode($res);
+  echo json_encode($pagamenti);
 ?>
