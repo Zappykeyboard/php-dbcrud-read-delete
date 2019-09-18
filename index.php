@@ -15,7 +15,9 @@
     <li class='pagamento-item' data-id={{id}}>
     id prestazione: {{prenotazione_id}} 
     id pagante: {{pagante_id}} 
-    somma: {{price}}</li>
+    somma: {{price}}
+    <button class='delete-button'> Elimina elemento</button>
+    </li>
     </script>
 
     <!-- CSS: MY STYLE -->
