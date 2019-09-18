@@ -13,6 +13,7 @@ function getPagamenti(){
     method: 'GET',
     success: function(data){
       console.log(data);
+      printPagamenti(data);
     },
     error: function(err){
       console.log(err);
@@ -22,6 +23,20 @@ function getPagamenti(){
 
 //inserisco i pagamenti
 function printPagamenti(data){
+
+  var source = $('#pagamento-row').html();
+  var template = Handlebars.compile(source);
+
+  for (var i = 0; i<data.length; i++){
+    var el = data[i];
+    var container = $('#'+el.status);
+
+    var context = el;
+
+    var html = template(context);
+
+    container.append(html);
+  }
 
 }
 
