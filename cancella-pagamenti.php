@@ -16,11 +16,10 @@
   }
 
   $id = $_GET['id'];
-  
+
   $query = '
   DELETE FROM pagamenti
-  WHERE id = ' 
-  . id;
+  WHERE id = ' . $id;
 
 
   $res = $connection ->query($query);
