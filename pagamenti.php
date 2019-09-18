@@ -1,5 +1,5 @@
 <?php
-  header('COntent-type: application/json');
+  header('Content-type: application/json');
 
 
   $serverName = 'localhost';
