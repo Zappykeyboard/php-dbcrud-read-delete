@@ -16,6 +16,7 @@
     id prestazione: {{prenotazione_id}} 
     id pagante: {{pagante_id}} 
     somma: {{price}}
+    <button class='update-payment-button'> Aggiorna elemento...</button>
     <button class='delete-button'> Elimina elemento</button>
     </li>
     </script>
@@ -32,21 +33,21 @@
     <h1>PAGAMENTI HOTEL</h1>
 
     <div class="container">
-      <h2>REJECTED</h2>
+      <h2>REJECTED</h2> <button class='add-payment-btn'>Aggiungi pagamento...</button>
       <div class="pagamenti-container" id='rejected'>
         <ul></ul>
       </div>
     </div>
 
   <div class="container">
-    <h2>PENDING</h2>
+    <h2>PENDING</h2> <button class='add-payment-btn'>Aggiungi pagamento...</button>
     <div class="pagamenti-container" id='pending'>
         <ul></ul>
     </div>
   </div>
 
   <div class="container">
-    <h2>ACCEPTED</h2>
+    <h2>ACCEPTED</h2> <button class='add-payment-btn'>Aggiungi pagamento...</button>
     <div class="pagamenti-container" id='accepted'>
         <ul></ul>
     </div>
