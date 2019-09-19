@@ -4,6 +4,7 @@ function init() {
   getPagamenti();
 
   $(document).on('click','.delete-button',deletePagamento);
+  $(document).on('click','.add-payment-btn',addNewPagamento);
   $(document).on('click', '.update-payment-button', updatePagamento);
 }
 
@@ -91,3 +92,25 @@ function updatePagamento(){
 }
 
 //aggiungo un nuovo pagamento
+function addNewPagamento(){
+  var status = $(this).siblings('.pagamenti-container').prop('id');
+  var price = prompt('Inserisci il prezzo');
+
+  var theData = {
+    status: status,
+    price: price
+  }
+
+  $.ajax({
+    url: 'aggiungi-pagamento.php',
+    method: 'GET',
+    data: theData,
+    success:function(data){
+      console.log(theData, data);
+      getPagamenti();
+    },
+    error:function(err){
+      console.log(err);
+    }
+  })
+}
